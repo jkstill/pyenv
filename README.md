@@ -188,12 +188,17 @@ easy to fork and contribute any changes back upstream.
         $ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
 
-2. **Define environment variable `PYENV_ROOT`** to point to the path where
-   pyenv repo is cloned and add `$PYENV_ROOT/bin` to your `$PATH` for access
-   to the `pyenv` command-line utility.
+2. **Define environment variable `PYENV_ROOT` and `SHIM_ROOT`** 
+   `PYENV_ROOT` point to the path where pyenv repo is cloned.
+   `SHIM_ROOT` point so the directory for pyenv shim files
+
+    Also add `$PYENV_ROOT/bin` to your `$PATH` for access to the `pyenv` command-line utility.
+
+    Assume pyenv was installed to /opt/python/pyenv
 
     ```sh
-    $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+    $ echo 'export SHIM_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+    $ echo 'export PYENV_ROOT="/opt/python/pyenv"' >> ~/.bash_profile
     $ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
     ```
     - **Zsh note**: Modify your `~/.zshenv` file instead of `~/.bash_profile`.

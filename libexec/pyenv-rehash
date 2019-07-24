@@ -4,7 +4,7 @@
 set -e
 [ -n "$PYENV_DEBUG" ] && set -x
 
-SHIM_PATH="${PYENV_ROOT}/shims"
+SHIM_PATH="${SHIM_ROOT}/shims"
 PROTOTYPE_SHIM_PATH="${SHIM_PATH}/.pyenv-shim"
 
 # Create the shims directory if it doesn't already exist.
