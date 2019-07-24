@@ -189,12 +189,14 @@ easy to fork and contribute any changes back upstream.
 
 
 2. **Define environment variable `PYENV_ROOT` and `SHIM_ROOT`** 
-   `PYENV_ROOT` point to the path where pyenv repo is cloned.
-   `SHIM_ROOT` point so the directory for pyenv shim files
+   `PYENV_ROOT` points to the path where pyenv repo is cloned.
+   `SHIM_ROOT` points to the directory for pyenv shim files.
 
     Also add `$PYENV_ROOT/bin` to your `$PATH` for access to the `pyenv` command-line utility.
 
-    Assume pyenv was installed to /opt/python/pyenv
+    Assume pyenv was installed to /opt/python/pyenv.  In this case the Python versions are installed and maintained by root.
+
+	 Users that wish to use pyenv will add the following to their `.bash_profile`. The only files stored in the HOME directory will be the shim files.
 
     ```sh
     $ echo 'export SHIM_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
